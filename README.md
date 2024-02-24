@@ -121,6 +121,18 @@ parent:nth-child(1+1){
 
 # select parent element with child element
 
+1. :has :- This allows you to style a parent element when it contains a specific child element.
+
+```css
+
+li:has(> a.active) {
+  /* styles to apply to the li tag having child as anchor who is active*/
+}
+
+
+```
+
+This will select <li> elements that are direct parents of an <a> element with the class .active
 
 ## !important:- used to override all the previous property applied to an element.
 
