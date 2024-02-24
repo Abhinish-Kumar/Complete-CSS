@@ -27,9 +27,18 @@ Pseudo selectors are used to target a specific part of an element like first let
 
 1. div:hover:- apply css on hover.
 
-### Pseudo selectors(for child elements)
+### Pseudo elements
 
-1. div:first-child:-select the first p of a div element.
+1. p::first-letter:- select the first letter of first line of the selector.
+
+```css
+
+p::first-letter{
+font-size:2rem,
+font-family:bold
+}
+
+```
 2. p::first-line:- select the first line of all the paragraph.
 3. p::before :-Insert the content before element.
 
@@ -44,20 +53,16 @@ content:"Mr"
 also used in animation like button hover slide up.
 Where we only style the psudo element and animate that as related to real element of is.
 
-4. p::first-letter:- select the first letter of first line of the selector.
-
-```css
-
-p::first-letter{
-font-size:2rem,
-font-family:bold
-}
-
-```
-5. p::after :- same as before selector but it add the content after the element.
+4. p::after :- same as before selector but it add the content after the element.
  these type of selectors are used to apply quotation marks at last and begining.
 
-6. ::selection :- selected the portion of the text that is selected by the cuesr(to copy).
+
+### Pseudo selectors(for child elements)
+
+1. div:first-child:-select the first p of a div element.
+
+
+2. ::selection :- selected the portion of the text that is selected by the cuesr(to copy).
 
 ```css
 
@@ -69,7 +74,7 @@ div::selector{
 bg-color:pink
 }
 ```
-7. ::placeholder :- Select the placeholder text in an input field.
+3. ::placeholder :- Select the placeholder text in an input field.
 
 ```css
 
@@ -77,7 +82,7 @@ bg-color:pink
 color:red
 }
 ```
-8. ::marker :- select the marker of the list.
+4. ::marker :- select the marker of the list.
 
 ```css
 
@@ -87,7 +92,7 @@ font-size:10px
 }
 ```
 
-9. input:focus :- select the input field when it is in focus.
+5. input:focus :- select the input field when it is in focus.
 
 ```css
 
@@ -97,7 +102,7 @@ border:none
 ```
 
 
-10. parent:nth-child:- select the child elements with numbers.
+6. parent:nth-child:- select the child elements with numbers.
 
 ```css
 
