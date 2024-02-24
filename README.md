@@ -117,6 +117,15 @@ parent:nth-child(1+1){
 # select parent element with child element
 
 
+## !important:- used to override all the previous property applied to an element.
+
+```css
+
+p{
+color:red !important;
+}
+```
+
 
 
 
