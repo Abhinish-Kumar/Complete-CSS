@@ -170,4 +170,86 @@ With "transform-style: preserve-3d;", the child elements will maintain their own
 
 #### Lets use it to create a 3d box.
 
+```css
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Box</title>
+<style>
+    .container {
+        perspective: 1000px; /* Perspective for 3D effect */
+        perspective-origin: center; /* Set the perspective origin */
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 0, 255, 0.5);
+        position: relative;
+        transform-style: preserve-3d; /* Maintain 3D positioning */
+        animation: rotate 5s linear infinite; /* Optional: Rotate animation */
+    }
+
+    .side {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #000;
+    }
+
+    .front { transform: translateZ(100px); }
+    .back { transform: translateZ(-100px) rotateY(180deg); }
+    .left { transform: rotateY(-90deg) translateZ(100px); }
+    .right { transform: rotateY(90deg) translateZ(100px); }
+    .top { transform: rotateX(90deg) translateZ(100px); }
+    .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+    @keyframes rotate {
+        from { transform: rotateY(0); }
+        to { transform: rotateY(360deg); }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <div class="side front">Front</div>
+        <div class="side back">Back</div>
+        <div class="side left">Left</div>
+        <div class="side right">Right</div>
+        <div class="side top">Top</div>
+        <div class="side bottom">Bottom</div>
+    </div>
+</div>
+</body>
+</html>
+
+```
+
+
+### 7. perspective(depth):
+Specifies the perspective from which an element is viewed.
+Affects the 3D transformations such as rotateX, rotateY, etc.
+Example: perspective(1000px); sets the perspective depth to 1000 pixels.
+
+
+```css
+
+.element {
+    transform: rotate(45deg) translate(50px, 50px) scale(1.5);
+}
+
+```
+
+### 8. matrix(a, b, c, d, tx, ty):
+
+
+
+
+
+
 
